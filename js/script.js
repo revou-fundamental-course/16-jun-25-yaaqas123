@@ -2,8 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // 1. Menampilkan waktu saat ini di form output
     function updateCurrentTime() {
         const now = new Date();
-        // Use 'en-GB' for a more standard date format, or keep 'en-US' if preferred.
-        // Also, specify Indonesia time zone.
         const options = {
             weekday: 'long',
             year: 'numeric',
@@ -13,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
             minute: '2-digit',
             second: '2-digit',
             timeZoneName: 'short',
-            timeZone: 'Asia/Jakarta' // Set to Jakarta time zone (WIB)
+            timeZone: 'Asia/Jakarta'
         };
         document.getElementById('current-time').textContent = now.toLocaleDateString('en-GB', options);
     }
@@ -60,9 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
     outputMessage.textContent = '-';
 
     messageForm.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent default form submission
-
-        // Clear previous error messages
+        event.preventDefault();
         document.getElementById('name-error').textContent = '';
         document.getElementById('dob-error').textContent = '';
         document.getElementById('gender-error').textContent = '';
@@ -116,13 +112,12 @@ document.addEventListener('DOMContentLoaded', function() {
             outputMessage.textContent = message;
 
             alert('Thank you for your message! We will get back to you shortly.');
-            messageForm.reset(); // Clear the form fields
+            messageForm.reset();
         } else {
             alert('Please correct the errors in the form.');
         }
     });
 
-    // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
