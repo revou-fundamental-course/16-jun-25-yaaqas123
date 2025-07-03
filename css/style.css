@@ -1,0 +1,381 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 960px; /* Lebar maksimal konten */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header & Navbar */
+header {
+    background-color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-weight: bold;
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #007bff; /* Warna biru saat hover */
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #e2f0ff; /* Warna latar belakang yang lebih terang */
+    margin-bottom: 30px;
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #0056b3;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.placeholder-image img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Menghilangkan ruang kosong di bawah gambar */
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+/* Headquarter Section */
+.headquarter-section {
+    padding: 40px 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.headquarter-section h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.headquarter-locations {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Jarak antar lokasi */
+    flex-wrap: wrap;
+}
+
+.location-item {
+    text-align: center;
+}
+
+.location-item .circle {
+    width: 100px;
+    height: 100px;
+    background-color: #add8e6; /* Warna biru muda */
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    display: flex; /* Untuk centering jika ada ikon/teks di dalamnya */
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #87ceeb;
+}
+
+/* Message Us Section */
+.message-us-section {
+    padding: 40px 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.message-us-section h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.form-content {
+    display: flex;
+    gap: 40px; /* Jarak antara form dan output */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#messageForm {
+    flex: 1; /* Akan mengambil ruang yang tersedia */
+    min-width: 300px; /* Agar tidak terlalu kecil */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group textarea {
+    width: calc(100% - 20px); /* Kurangi padding */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.radio-group {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 5px;
+}
+
+.form-group button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.form-group button:hover {
+    background-color: #0056b3;
+}
+
+.form-output {
+    flex: 1; /* Akan mengambil ruang yang tersedia */
+    min-width: 300px; /* Agar tidak terlalu kecil */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-sizing: border-box; /* Agar padding tidak menambah lebar */
+}
+
+.form-output p {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.form-output strong {
+    color: #333;
+}
+
+.form-output span {
+    font-weight: normal;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: block; /* Memastikan pesan error di baris baru */
+}
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+/* Styling for profile section (previously profile.html) */
+.profile-section {
+    padding: 40px 0;
+    margin-bottom: 30px;
+}
+
+.profile-banner {
+    background-color: #f0f8ff; /* Warna latar belakang */
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+.profile-banner img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.profile-banner h1 {
+    font-size: 2.5em;
+    color: #0056b3;
+}
+
+.company-info-section, .vision-mission-section {
+    padding: 40px 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+.company-info-section h2, .vision-mission-section h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.company-info-section p {
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.vision-mission-section .container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap; /* Untuk responsif */
+    justify-content: center;
+}
+
+.vision, .mission {
+    flex: 1;
+    min-width: 300px; /* Agar tidak terlalu sempit */
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background-color: #fcfcfc;
+}
+
+.vision ul, .mission ul {
+    list-style: none;
+    padding: 0;
+}
+
+.vision ul li, .mission ul li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.vision ul li::before, .mission ul li::before {
+    content: '✅'; /* Simbol bullet point */
+    position: absolute;
+    left: 0;
+    color: #28a745; /* Warna hijau */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        margin-top: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5em;
+    }
+
+    .headquarter-locations {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .form-content {
+        flex-direction: column;
+    }
+
+    #messageForm,
+    .form-output {
+        width: 100%;
+        max-width: 400px; /* Batasi lebar pada layar kecil */
+        margin: 0 auto;
+    }
+    /* Responsive for profile section */
+    .profile-banner h1 {
+        font-size: 2em;
+    }
+    .vision-mission-section .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .vision, .mission {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 2em;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="date"],
+    .form-group textarea {
+        width: calc(100% - 20px);
+    }
+}
