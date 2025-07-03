@@ -1,51 +1,55 @@
+/* General Styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif; /* Use Roboto for a modern feel */
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f8f9fa; /* Lighter background */
+    color: #343a40; /* Darker text for better readability */
     line-height: 1.6;
 }
 
 .container {
-    max-width: 960px; /* Lebar maksimal konten */
+    max-width: 1000px; /* Slightly wider container */
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 25px; /* More padding on sides */
 }
 
 /* Header & Navbar */
 header {
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 15px 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08); /* More prominent shadow */
+    position: sticky; /* Make header sticky */
+    top: 0;
+    z-index: 1000; /* Ensure header is on top */
 }
 
 .navbar {
     display: flex;
-    justify-content: space-between; /* Ini yang membuat elemen paling kiri dan paling kanan menjauh */
+    justify-content: space-between;
     align-items: center;
 }
 
 .logo-area {
-    display: flex; /* Penting: Gunakan flexbox untuk mensejajarkan gambar dan teks di dalamnya */
-    align-items: center; /* Sejajarkan secara vertikal di tengah */
-    /* Pastikan tidak ada margin/padding yang tidak perlu di sini */
+    display: flex;
+    align-items: center;
 }
 
 .navbar .logo-image {
-    width: 60px; /* Sesuaikan ukuran sesuai keinginan */
-    height: 60px;
-    border-radius: 50%; /* Membuat gambar menjadi lingkaran */
-    object-fit: cover; /* Penting: Memastikan gambar mengisi lingkaran dengan baik */
-    margin-right: 8px; /* Mengurangi jarak antara gambar dan teks. Anda bisa coba 5px, 8px, atau 10px */
+    width: 50px; /* Slightly smaller logo */
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for logo */
 }
 
 .navbar .logo-text {
-    font-weight: bold;
-    font-size: 24px;
-    color: #333;
+    font-weight: 700; /* Bolder font */
+    font-size: 26px; /* Slightly larger */
+    color: #007bff; /* Primary brand color */
     text-decoration: none;
-    /* display: inline-block; <-- Hapus baris ini */
+    letter-spacing: -0.5px; /* Tighter letter spacing */
 }
 
 .nav-links {
@@ -56,262 +60,226 @@ header {
 }
 
 .nav-links li {
-    margin-left: 20px;
+    margin-left: 30px; /* Increased spacing */
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #555;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    color: #5a6268; /* Muted color for links */
+    font-weight: 500; /* Medium font weight */
+    transition: color 0.3s ease, transform 0.2s ease; /* Add transform transition */
 }
 
 .nav-links a:hover {
-    color: #007bff; /* Warna biru saat hover */
+    color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.primary-button {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #007bff;
+}
+
+.primary-button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.secondary-button {
+    background-color: transparent;
+    color: #007bff;
+    border: 1px solid #007bff;
+    margin-left: 15px;
+}
+
+.secondary-button:hover {
+    background-color: #e9f5ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.1);
+}
+
+.small-button {
+    padding: 8px 15px;
+    font-size: 0.9em;
+    margin-top: 10px;
 }
 
 /* Hero Section */
 .hero-section {
-    padding: 60px 0;
+    padding: 80px 0; /* More vertical space */
     text-align: center;
-    background-color: #e2f0ff; /* Warna latar belakang yang lebih terang */
-    margin-bottom: 30px;
+    background: linear-gradient(to right, #eaf6ff, #f8fcff); /* Gradient background */
+    margin-bottom: 40px;
+    border-radius: 8px; /* Slightly rounded corners */
+    overflow: hidden; /* Clear any floating content */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 .hero-section h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-    color: #0056b3;
+    font-size: 3.5em; /* Larger heading */
+    margin-bottom: 15px;
+    color: #1a2a3a; /* Darker, more sophisticated blue */
+    line-height: 1.2;
 }
 
 .hero-section p {
-    font-size: 1.2em;
-    color: #666;
-    margin-bottom: 30px;
+    font-size: 1.3em; /* Larger paragraph */
+    color: #6c757d;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-actions {
+    margin-bottom: 50px; /* Space before image */
 }
 
 .placeholder-image img {
-    max-width: 100%;
+    max-width: 90%; /* Slightly smaller for better padding */
     height: auto;
-    display: block; /* Menghilangkan ruang kosong di bawah gambar */
+    display: block;
     margin: 0 auto;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    border: 5px solid #ffffff; /* White border */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* Stronger shadow */
+    border-radius: 10px;
 }
 
 /* Headquarter Section */
 .headquarter-section {
-    padding: 40px 0;
+    padding: 60px 0;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-radius: 8px;
 }
 
 .headquarter-section h2 {
-    font-size: 2em;
-    margin-bottom: 30px;
-    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #1a2a3a;
 }
 
 .headquarter-locations {
     display: flex;
     justify-content: center;
-    gap: 40px; /* Jarak antar lokasi */
+    gap: 50px; /* Increased gap */
     flex-wrap: wrap;
 }
 
 .location-item {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .location-item .circle {
-    width: 100px;
-    height: 100px;
-    background-color: #add8e6; /* Warna biru muda */
+    width: 80px; /* Smaller circle */
+    height: 80px;
+    background-color: #d1ecf1; /* Lighter blue */
     border-radius: 50%;
-    margin: 0 auto 10px auto;
-    display: flex; /* Untuk centering jika ada ikon/teks di dalamnya */
+    margin: 0 auto 15px auto;
+    display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #87ceeb;
+    border: 3px solid #ade8f4; /* Matching border */
+    font-size: 2.5em; /* Icon size */
+    color: #007bff; /* Icon color */
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
 }
 
-/* Message Us Section */
-.message-us-section {
-    padding: 40px 0;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    margin-bottom: 30px;
-}
-
-.message-us-section h2 {
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 30px;
-    color: #333;
-}
-
-.form-content {
-    display: flex;
-    gap: 40px; /* Jarak antara form dan output */
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-#messageForm {
-    flex: 1; /* Akan mengambil ruang yang tersedia */
-    min-width: 300px; /* Agar tidak terlalu kecil */
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.form-group input[type="text"],
-.form-group input[type="date"],
-.form-group textarea {
-    width: calc(100% - 20px); /* Kurangi padding */
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1em;
-}
-
-.radio-group {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-}
-
-.radio-group input[type="radio"] {
-    margin-right: 5px;
-}
-
-.form-group button {
-    background-color: #007bff;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.location-item p {
     font-size: 1.1em;
-    transition: background-color 0.3s ease;
-}
-
-.form-group button:hover {
-    background-color: #0056b3;
-}
-
-.form-output {
-    flex: 1; /* Akan mengambil ruang yang tersedia */
-    min-width: 300px; /* Agar tidak terlalu kecil */
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    box-sizing: border-box; /* Agar padding tidak menambah lebar */
-}
-
-.form-output p {
-    margin-bottom: 10px;
     color: #555;
-}
-
-.form-output strong {
-    color: #333;
-}
-
-.form-output span {
-    font-weight: normal;
-}
-
-.error-message {
-    color: red;
-    font-size: 0.9em;
-    margin-top: 5px;
-    display: block; /* Memastikan pesan error di baris baru */
+    font-weight: 500;
 }
 
 
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 30px;
-}
-
-/* Styling for profile section (previously profile.html) */
+/* Profile Section */
 .profile-section {
-    padding: 40px 0;
-    margin-bottom: 30px;
+    padding: 60px 0;
+    margin-bottom: 40px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-radius: 8px;
 }
 
 .profile-banner {
-    background-color: #f0f8ff; /* Warna latar belakang */
-    padding: 20px 0;
+    background-color: #f0f8ff;
+    padding: 30px 0;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     border-radius: 8px;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.03);
 }
 
 .profile-banner img {
-    max-width: 100%;
+    max-width: 90%; /* Adjust as needed */
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    margin-bottom: 25px;
 }
 
 .profile-banner h1 {
-    font-size: 2.5em;
+    font-size: 3em;
     color: #0056b3;
+    margin-top: 0;
 }
 
 .company-info-section, .vision-mission-section {
-    padding: 40px 0;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    padding: 40px; /* More internal padding */
+    background-color: #fefefe;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     margin-bottom: 30px;
     border-radius: 8px;
 }
 
 .company-info-section h2, .vision-mission-section h2 {
     text-align: center;
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #333;
+    font-size: 2.2em;
+    margin-bottom: 25px;
+    color: #1a2a3a;
 }
 
 .company-info-section p {
     text-align: justify;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    line-height: 1.7;
+    color: #495057;
 }
 
 .vision-mission-section .container {
     display: flex;
-    gap: 30px;
-    flex-wrap: wrap; /* Untuk responsif */
+    gap: 40px; /* Increased gap */
+    flex-wrap: wrap;
     justify-content: center;
 }
 
 .vision, .mission {
     flex: 1;
-    min-width: 300px; /* Agar tidak terlalu sempit */
-    padding: 20px;
-    border: 1px solid #eee;
+    min-width: 320px; /* Slightly wider min-width */
+    padding: 25px;
+    border: 1px solid #e0e0e0;
     border-radius: 8px;
-    background-color: #fcfcfc;
+    background-color: #ffffff;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
 }
 
 .vision ul, .mission ul {
@@ -320,66 +288,322 @@ footer {
 }
 
 .vision ul li, .mission ul li {
-    margin-bottom: 10px;
-    padding-left: 20px;
+    margin-bottom: 12px;
+    padding-left: 25px; /* More space for bullet */
     position: relative;
+    line-height: 1.6;
+    color: #495057;
 }
 
 .vision ul li::before, .mission ul li::before {
-    content: '✅'; /* Simbol bullet point */
+    content: '⭐'; /* More engaging bullet point */
     position: absolute;
     left: 0;
-    color: #28a745; /* Warna hijau */
+    color: #ffc107; /* Gold color */
+    font-size: 1.2em;
+}
+
+/* Portfolio Section */
+.portfolio-section {
+    padding: 60px 0;
+    background-color: #eaf6ff; /* Light blue background */
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.portfolio-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #1a2a3a;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 30px; /* Space between items */
+    justify-content: center;
+}
+
+.portfolio-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Stronger shadow */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding-bottom: 20px; /* Space for button */
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensures images cover the area */
+    display: block;
+    border-bottom: 1px solid #eee;
+}
+
+.portfolio-item h3 {
+    font-size: 1.6em;
+    color: #007bff;
+    margin: 15px 15px 10px;
+}
+
+.portfolio-item p {
+    font-size: 0.95em;
+    color: #6c757d;
+    padding: 0 15px;
+    margin-bottom: 15px;
+}
+
+/* Message Us Section */
+.message-us-section {
+    padding: 60px 0;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+    border-radius: 8px;
+}
+
+.message-us-section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #1a2a3a;
+}
+
+.form-content {
+    display: flex;
+    gap: 50px; /* Increased gap */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+}
+
+#messageForm {
+    flex: 1;
+    min-width: 350px; /* Larger min-width for form */
+    padding: 30px; /* More padding */
+    border: 1px solid #e0e0e0;
+    border-radius: 10px; /* More rounded corners */
+    background-color: #fdfdfd;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 20px; /* More space between groups */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px; /* More space below label */
+    font-weight: 600; /* Bolder label */
+    color: #343a40;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group textarea {
+    width: calc(100% - 24px); /* Account for padding + border */
+    padding: 12px; /* More padding */
+    border: 1px solid #ced4da; /* Lighter border */
+    border-radius: 6px; /* Rounded corners */
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="date"]:focus,
+.form-group textarea:focus {
+    border-color: #007bff; /* Highlight on focus */
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    outline: none;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px; /* More space */
+    align-items: center;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 8px;
+}
+
+.form-group button {
+    background-color: #28a745; /* Green submit button */
+    color: white;
+    padding: 15px 30px; /* Larger button */
+    border: none;
+    border-radius: 8px; /* More rounded */
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form-group button:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.2);
+}
+
+.form-output {
+    flex: 1;
+    min-width: 350px; /* Larger min-width for output */
+    padding: 30px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #fdfdfd;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    box-sizing: border-box;
+}
+
+.form-output h3 {
+    font-size: 1.8em;
+    color: #007bff;
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.form-output p {
+    margin-bottom: 12px;
+    color: #5a6268;
+    font-size: 1.05em;
+}
+
+.form-output strong {
+    color: #343a40;
+    margin-right: 5px;
+}
+
+.form-output span {
+    font-weight: normal;
+    word-wrap: break-word; /* Prevent long words from overflowing */
+}
+
+.error-message {
+    color: #dc3545; /* Red color for errors */
+    font-size: 0.85em;
+    margin-top: 6px;
+    display: block;
+    font-weight: 500;
 }
 
 
+/* Footer */
+footer {
+    background-color: #212529; /* Darker footer */
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 50px;
+    font-size: 0.95em;
+}
+
+footer p {
+    margin: 0;
+    color: #adb5bd; /* Lighter text in footer */
+}
+
 /* Responsive Design */
+@media (max-width: 992px) {
+    .container {
+        padding: 0 20px;
+    }
+    .hero-section h1 {
+        font-size: 3em;
+    }
+    .headquarter-locations,
+    .portfolio-grid,
+    .form-content,
+    .vision-mission-section .container {
+        gap: 25px;
+    }
+}
+
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
+        align-items: flex-start; /* Align logo to left */
     }
 
     .nav-links {
-        margin-top: 15px;
+        margin-top: 20px;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start; /* Align links to left */
+        width: 100%; /* Take full width */
     }
 
     .nav-links li {
         margin: 10px 0;
+        width: 100%;
+        text-align: center; /* Center links for better appearance */
+    }
+
+    .nav-links a {
+        display: block; /* Make links block level */
+        padding: 8px 0;
+        border-bottom: 1px solid #eee; /* Separator for links */
+    }
+    .nav-links li:last-child a {
+        border-bottom: none;
+    }
+
+    .hero-section {
+        padding: 60px 0;
     }
 
     .hero-section h1 {
         font-size: 2.5em;
     }
 
+    .hero-actions {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+    }
+    .secondary-button {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+
+    .headquarter-section h2,
+    .profile-banner h1,
+    .company-info-section h2,
+    .vision-mission-section h2,
+    .portfolio-section h2,
+    .message-us-section h2 {
+        font-size: 2em;
+    }
+
     .headquarter-locations {
         flex-direction: column;
         align-items: center;
-        gap: 20px;
+        gap: 30px;
     }
 
     .form-content {
         flex-direction: column;
+        gap: 30px;
     }
 
     #messageForm,
     .form-output {
-        width: 100%;
-        max-width: 400px; /* Batasi lebar pada layar kecil */
+        width: 90%; /* Wider on smaller screens */
+        max-width: 500px; /* Limit max-width */
         margin: 0 auto;
     }
-    /* Responsive for profile section */
-    .profile-banner h1 {
-        font-size: 2em;
-    }
-    .vision-mission-section .container {
-        flex-direction: column;
-        align-items: center;
-    }
+
     .vision, .mission {
-        width: 100%;
-        max-width: 400px;
+        width: 90%;
+        max-width: 500px;
     }
 }
 
@@ -387,10 +611,31 @@ footer {
     .hero-section h1 {
         font-size: 2em;
     }
+    .hero-section p {
+        font-size: 1.1em;
+    }
+
+    .navbar .logo-text {
+        font-size: 22px;
+    }
+
+    .nav-links a {
+        font-size: 0.95em;
+    }
 
     .form-group input[type="text"],
     .form-group input[type="date"],
     .form-group textarea {
-        width: calc(100% - 20px);
+        width: calc(100% - 20px); /* Adjust padding */
+    }
+
+    .location-item .circle {
+        width: 70px;
+        height: 70px;
+        font-size: 2em;
+    }
+
+    .profile-banner img {
+        max-width: 100%;
     }
 }
