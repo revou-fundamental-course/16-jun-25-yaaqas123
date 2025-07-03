@@ -22,15 +22,30 @@ header {
 
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Ini yang membuat elemen paling kiri dan paling kanan menjauh */
     align-items: center;
 }
 
-.navbar .logo {
+.logo-area {
+    display: flex; /* Penting: Gunakan flexbox untuk mensejajarkan gambar dan teks di dalamnya */
+    align-items: center; /* Sejajarkan secara vertikal di tengah */
+    /* Pastikan tidak ada margin/padding yang tidak perlu di sini */
+}
+
+.navbar .logo-image {
+    width: 60px; /* Sesuaikan ukuran sesuai keinginan */
+    height: 60px;
+    border-radius: 50%; /* Membuat gambar menjadi lingkaran */
+    object-fit: cover; /* Penting: Memastikan gambar mengisi lingkaran dengan baik */
+    margin-right: 8px; /* Mengurangi jarak antara gambar dan teks. Anda bisa coba 5px, 8px, atau 10px */
+}
+
+.navbar .logo-text {
     font-weight: bold;
     font-size: 24px;
     color: #333;
     text-decoration: none;
+    /* display: inline-block; <-- Hapus baris ini */
 }
 
 .nav-links {
