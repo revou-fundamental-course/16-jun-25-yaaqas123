@@ -1,5 +1,8 @@
 # Industrial Co. - Company Profile Website
 
+![image](https://github.com/user-attachments/assets/b82b5a68-887e-48f3-95ea-15ee2af116ca)
+
+
 Sebuah website sample profil perusahaan yang dirancang untuk "Industrial Co.", menampilkan informasi tentang perusahaan, portofolio proyek, dan formulir kontak. Website ini dibangun menggunakan HTML, CSS, dan JavaScript.
 
 ## Tentang Proyek
