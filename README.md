@@ -38,7 +38,7 @@ Website ini dilengkapi dengan fitur-fitur sebagai berikut:
 ## Teknologi yang Digunakan
 * **HTML5**
 * **CSS3**
-* **JavaScript (ES6+)**
+* **JavaScript**
 * **Google Fonts** `Roboto` dan `Montserrat`.
 
 ## Informasi Tambahan
