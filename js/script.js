@@ -32,15 +32,41 @@ document.addEventListener('DOMContentLoaded', function() {
             timeOfDayGreeting = "Good Evening";
         }
 
-        const userName = prompt("Please enter your name for the greeting:");
+        const userName = prompt("Please enter your nick name for the greeting:");
         const greetingElement = document.getElementById('greeting');
+        const heroSection = document.getElementById('home');
+        const mainContentSections = document.querySelectorAll('main > section:not(#home)');
+        const header = document.querySelector('header');
+        const footer = document.querySelector('footer');
+        document.body.style.overflow = 'hidden'; // Menghindari scrolling sebelum muncul
+
 
         if (userName && userName.trim() !== '') {
-            greetingElement.textContent = `${timeOfDayGreeting}, ${userName}! Welcome To My Company`;
+            greetingElement.textContent = `${timeOfDayGreeting}, ${userName}! Welcome To Industrial Co.`;
         } else {
-            greetingElement.textContent = `${timeOfDayGreeting}, Guest! Welcome To My Company`;
+            greetingElement.textContent = `${timeOfDayGreeting}, Guest! Welcome To Industrial Co.`;
         }
+
+        // Setelah nama disetel, baru tampilkan konten
+        if (heroSection) {
+            heroSection.classList.remove('hidden');
+        }
+        // Pastikan juga section lain di dalam main ditampilkan jika sebelumnya hidden
+        mainContentSections.forEach(section => {
+            section.classList.remove('hidden');
+        });
+        // Tampilkan header dan footer juga jika menyembunyikannya
+        if (header) {
+            header.classList.remove('hidden');
+        }
+        if (footer) {
+            footer.classList.remove('hidden');
+        }
+
+        document.body.style.overflow = ''; // Aktifkan kembali scrolling
     }
+
+    // Panggil setGreeting secara langsung saat DOM selesai dimuat
     setGreeting();
 
 
@@ -51,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const outputGender = document.getElementById('output-gender');
     const outputMessage = document.getElementById('output-message');
 
-    // Reset form output on page load
+    // Setel ulang keluaran formulir saat memuat halaman
     outputName.textContent = '-';
     outputDob.textContent = '-';
     outputGender.textContent = '-';
@@ -66,46 +92,46 @@ document.addEventListener('DOMContentLoaded', function() {
 
         let isValid = true;
 
-        // Get form values
+        // Dapatkan nilai form
         const name = document.getElementById('name').value.trim();
         const dob = document.getElementById('dob').value;
         const gender = document.querySelector('input[name="gender"]:checked');
         const message = document.getElementById('message').value.trim();
 
-        // Validate Name
+        // Validasi nama
         if (name === '') {
             document.getElementById('name-error').textContent = 'Name cannot be empty.';
             isValid = false;
         }
 
-        // Validate Date of Birth
+        // Validasi Tanggal Lahir
         if (dob === '') {
             document.getElementById('dob-error').textContent = 'Date of Birth cannot be empty.';
             isValid = false;
         } else {
             const selectedDate = new Date(dob);
             const currentDate = new Date();
-            // Check if the selected date is in the future
+            // Periksa apakah tanggal yang dipilih ada di masa depan
             if (selectedDate > currentDate) {
                 document.getElementById('dob-error').textContent = 'Date of Birth cannot be in the future.';
                 isValid = false;
             }
         }
 
-        // Validate Gender
+        // Validasi jenis kelamin
         if (!gender) {
             document.getElementById('gender-error').textContent = 'Gender must be selected.';
             isValid = false;
         }
 
-        // Validate Message
+        // Validasi pesan
         if (message === '') {
             document.getElementById('message-error').textContent = 'Message cannot be empty.';
             isValid = false;
         }
 
         if (isValid) {
-            // If all valid, display data in output section
+            // Jika semua valid, tampilkan data di bagian output
             outputName.textContent = name;
             outputDob.textContent = dob;
             outputGender.textContent = gender ? gender.value : '-';
